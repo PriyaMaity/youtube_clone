@@ -93,16 +93,13 @@ header .icons img:hover {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 15vw 1fr;  /* Creates two columns: aside and right content */
-    gap: 20px;
-    padding: 20px;
+    display: flex;
+    gap: 60px;
 }
 
 aside {
-    width: 100%;
     margin-top: 20px;
-    border: 2px solid blue;
+    width: 15vw;
 }
 
 aside ul {
@@ -129,8 +126,8 @@ aside ul li:hover {
 }
 
 aside ul li img {
-    height: 24px;
-    width: 24px;
+    height: 24px;  /* Adjust to your preferred size */
+    width: 24px;   /* Adjust to your preferred size */
     object-fit: cover;
 }
 
@@ -155,14 +152,13 @@ h3 {
 }
 
 nav {
-    width: 100%;
+    width: 75vw;
     margin-top: 20px;
 }
 
 nav ul {
     display: flex;
     gap: 30px;
-    border: 2px solid red;
 }
 
 nav ul li {
@@ -188,16 +184,11 @@ nav ul #all:hover {
     background-color: rgba(255, 255, 255, 0.499);
 }
 
-.right-content {
-    display: flex;
-    flex-direction: column;  /* Stack nav and video-container vertically */
-    width: 100%;  /* Takes up remaining space next to aside */
-}
-
 .video-container {
-    margin-top: 20px;  /* Ensures the video container is below nav */
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
+    align-content: centre;
     gap: 20px;
 }
 
