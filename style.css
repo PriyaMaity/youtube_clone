@@ -18,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: #202020;
+    background-color: #000000;
 }
 
 header .logo {
@@ -94,15 +94,17 @@ header .icons img:hover {
 
 main {
     display: grid;
-    grid-template-columns: 15vw 1fr;  /* Creates two columns: aside and right content */
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: 250px 1fr; 
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    padding: 0px;
+    margin-top: 20px;
 }
 
 aside {
-    width: 100%;
-    margin-top: 20px;
-    border: 2px solid blue;
+    grid-area: 1 / 1 / 6 / 2;
+    height: 100%;
 }
 
 aside ul {
@@ -155,14 +157,14 @@ h3 {
 }
 
 nav {
-    width: 100%;
+    grid-area: 1 / 2 / 2 / 3;
     margin-top: 20px;
 }
 
 nav ul {
     display: flex;
     gap: 30px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 nav ul li {
@@ -189,13 +191,14 @@ nav ul #all:hover {
 }
 
 .right-content {
+    grid-area: 2 / 2 / 6 / 3; 
     display: flex;
-    flex-direction: column;  /* Stack nav and video-container vertically */
-    width: 100%;  /* Takes up remaining space next to aside */
+    flex-direction: column;
+    width: 100%;
 }
 
 .video-container {
-    margin-top: 20px;  /* Ensures the video container is below nav */
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -213,9 +216,9 @@ nav ul #all:hover {
 }
 
 .video-container .card img {
-    margin-top: 10px;
-    width: 90%;
-    object-fit: cover;
+    margin-top: 0px;
+    width: 80%;
+    object-fit: fill;
     border-radius: 12px;
 }
 
