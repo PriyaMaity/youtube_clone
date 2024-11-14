@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #181818;
+    background-color: #000000;
     color: white;
 }
 /* Header section */
@@ -84,4 +84,154 @@ header .icons img {
 header .icons img:hover {
     background-color: #3c3c3c;
     padding: 5px;
+}
+
+main {
+    display: flex;
+    margin-top: 20px;
+}
+
+aside {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    height: calc(100vh - 60px);
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+aside ul li:hover {
+    background-color: #444;
+}
+
+aside ul li img {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+aside .aside-footer {
+    margin-top: 30px;
+}
+
+nav {
+    width: calc(100% - 200px);
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+}
+
+nav ul li:hover {
+    background-color: #555;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.video-container .card {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.video-container .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.video-container .card:hover {
+    transform: scale(1.05);
+}
+
+.video-container .main-info {
+    padding: 10px;
+}
+
+.video-container .main-info h4 {
+    margin-bottom: 10px;
+}
+
+.video-container .info p {
+    color: #888;
+}
+
+.video-container .details p {
+    color: #888;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .video-container .card {
+        width: 48%;
+    }
+
+    header .mid input {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .yt-logo img:nth-child(2) {
+        display: none;
+    }
+
+    header .mid input {
+        width: 200px;
+    }
+
+    .video-container .card {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
